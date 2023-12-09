@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class EulerNumber {
     public static void main(String[] args) {
-        int terms = 20; // Number of terms to approximate e
+        int terms = 20; 
         
         BigDecimal eulerNumber = calculateEulerNumber(terms);
         
@@ -10,16 +10,16 @@ public class EulerNumber {
     }
 
     public static BigDecimal calculateEulerNumber(int terms) {
-        BigDecimal e = BigDecimal.ONE; // Initialize e as 1
+        BigDecimal e = BigDecimal.ONE; 
         
-        BigDecimal factorial = BigDecimal.ONE; // Factorial starts from 1
+        BigDecimal factorial = BigDecimal.ONE; 
         
         for (int i = 1; i < terms; i++) {
-            factorial = factorial.multiply(BigDecimal.valueOf(i)); // Calculate factorial
+            factorial = factorial.multiply(BigDecimal.valueOf(i));
             
-            BigDecimal term = BigDecimal.ONE.divide(factorial, 25, BigDecimal.ROUND_HALF_UP); // Calculate 1/factorial
+            BigDecimal term = BigDecimal.ONE.divide(factorial, 25, BigDecimal.ROUND_HALF_UP); 
             
-            e = e.add(term); // Add the term to e
+            e = e.add(term); 
         }
         
         return e;
