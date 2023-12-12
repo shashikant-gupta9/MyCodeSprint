@@ -1,18 +1,18 @@
 public class SimpleLinearRegression {
     public static void main(String[] args) {
-        // Training data: input (X) and corresponding output (Y)
+        
         double[] X = {1, 2, 3, 4, 5};
         double[] Y = {2, 4, 6, 8, 10};
 
-        // Initialize variables for slope (m) and y-intercept (b)
+        
         double m = 0;
         double b = 0;
 
-        // Learning rate and number of iterations for gradient descent
+        
         double learningRate = 0.01;
         int iterations = 1000;
 
-        // Performing gradient descent to update slope and y-intercept
+    
         for (int i = 0; i < iterations; i++) {
             double[] predictedY = predict(X, m, b);
             double cost = costFunction(Y, predictedY);
